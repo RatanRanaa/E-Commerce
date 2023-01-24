@@ -4,7 +4,7 @@ const Navbar = () => {
     const [toggle, setToggle] = useState(false)
   return (
     <>
-     <div className=' w-full h-12 bg-black shadow-2xl'>
+     <div className=' w-full h-12 bg-black shadow-2xl z-10 fixed'>
             <div className=' flex items-center justify-between px-20'>
                 <div>
                     <i class="cursor-pointer bg-cover bg-center rounded-3xl p-2 text-white text-2xl fa-solid fa-house"></i>
@@ -44,7 +44,7 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-    
+        <hr className=' text-white h-4' />
     </>
   )
 }
