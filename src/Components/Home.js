@@ -3,6 +3,7 @@ import image1 from "./image/image1.webp"
 import image22 from "./image/image22.jpg"
 import image from "./image/image.png"
 import image6 from "./image/image6.jpg"
+import Product from "./Product";
 
 function Home() {
 
@@ -11,7 +12,7 @@ function Home() {
 
   useEffect(() => {
     setInterval(() => {
-      setSelectedImage(selectedImage => selectedImage < 3 ? selectedImage + 1 : 0)
+      setSelectedImage(selectedImage => selectedImage < 4 ? selectedImage + 1 : 0)
     }, 8000)
   }, [])
 
@@ -50,7 +51,7 @@ function Home() {
           </button>
         </div>
       </div>
-
+      <Product/>
     </>
   );
 }

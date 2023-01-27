@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../Global/CartContext'
 
 const Navbar = () => {
+    const {qty} = useContext(CartContext)
     const [toggle, setToggle] = useState(false)
   return (
     <>
@@ -20,7 +22,7 @@ const Navbar = () => {
                                 <Link to="/product"><h1>Product</h1></Link>
                             </div>
                             <div className=' px-6 hover:underline hover:underline-offset-8 font-medium text-[20px] decoration-3  underline underline-offset-2 '>
-                                <h1>Cart-item</h1>
+                                <Link to="/cart"><h1>Cart-item {qty}</h1></Link>
                             </div>
                             <div className=' px-6 hover:underline hover:underline-offset-8 font-medium text-[20px] decoration-3  underline underline-offset-2 '>
                                 <h1>Contact</h1>
@@ -38,7 +40,7 @@ const Navbar = () => {
                     <h1 onClick={()=>setToggle(!toggle)}>Projects</h1>
                 </div>
                 <div className=' pb-6 hover:underline hover:underline-offset-8 font-medium text-[20px] decoration-3  cursor-pointer underline un2erline-offset-8'>
-                    <h1 onClick={()=>setToggle(!toggle)}>Cart-item</h1>
+                    <Link to="/cart"><h1 onClick={()=>setToggle(!toggle)}>Cart-item {qty}</h1></Link>
                 </div>
                 <div className=' pb-6 hover:underline hover:underline-offset-8 font-medium text-[20px] decoration-3  cursor-pointer underline un2erline-offset-8'>
                     <h1 onClick={()=>setToggle(!toggle)}>Contact</h1>

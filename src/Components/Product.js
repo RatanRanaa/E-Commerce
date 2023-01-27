@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react'
+import { CartContext } from '../Global/CartContext'
 import { ProductsContext } from '../Global/ProductsContext'
 
 const Product = () => {
   const { products } = useContext(ProductsContext)
   const [query, setQuery] = useState("")
+  const { dispatch } = useContext(CartContext)
   return (
     <>
         <div className=' h-screen mt-10'>
@@ -30,7 +32,7 @@ const Product = () => {
                           <div className="px-6 py-4">
                               <button
                                 className="bg-indigo-500 text-white py-2 px-4 rounded-full hover:bg-indigo-600"
-                                // onClick={() => onAddToCart(product)}
+                                onClick={()=>dispatch({ type: "ADD_TO_CART", id: product.id, product})}
                               >
                                 Add to cart
                               </button>
