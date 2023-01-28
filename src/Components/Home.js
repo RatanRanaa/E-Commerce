@@ -3,17 +3,18 @@ import image1 from "./image/image1.webp"
 import image22 from "./image/image22.jpg"
 import image from "./image/image.png"
 import image6 from "./image/image6.jpg"
+import image2 from "./image/image2.jpg"
 import Product from "./Product";
 
 function Home() {
 
   const [selectedImage, setSelectedImage] = useState(0)
-  const [allImages] = useState([image1, image22, image, image6])
+  const [allImages] = useState([image1, image2, image22, image, image6])
 
   useEffect(() => {
     setInterval(() => {
       setSelectedImage(selectedImage => selectedImage < 4 ? selectedImage + 1 : 0)
-    }, 8000)
+    }, 3000)
   }, [])
 
   return (
