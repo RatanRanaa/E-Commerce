@@ -4,19 +4,9 @@ import { CartContext } from '../Global/CartContext'
 const Cart = () => {
     const { shoppingCart, totalPrice, dispatch, qty  } = useContext(CartContext)
   return (
-    <div className=' md:w-3/4 mt-8 py-4 grid md:grid-cols-2 gap-6 items-center justify-center px-5'>
-      <div className=' '>
-        {
-          shoppingCart.length > 0 ?
-          <div>
-            Qty: {qty} 
-            ${totalPrice}
-          </div>
-          
-          :
-          ""
-        }
-      </div>
+    <>
+    <div className='  mt-8 py-4 grid md:grid-cols-3 gap-6 items-center justify-center px-5'>
+      
       {shoppingCart.length > 0 ?
       shoppingCart.map(cart => (
         <div key={cart.id}>
@@ -43,6 +33,20 @@ const Cart = () => {
     :
     "Sorry Your Cart is Currently Empty"}
     </div>
+    <div className=' '>
+    {
+      shoppingCart.length > 0 ?
+      <div className=' flex mb-5 items-center justify-center flex-col text-4xl border-2 border-black'>
+        <h1 className=' py-4 underline underline-offset-8'> Qty: {qty}</h1>
+        <h1 className=' py-4 underline underline-offset-8'> Price : ${totalPrice}</h1>
+        <button class="bg-indigo-800 text-white p-2 my-4 rounded-md items-center justify-center flex">Buy Now</button>
+      </div>
+      :
+      ""
+    }
+  </div>
+  </>
+    
   )
 }
 

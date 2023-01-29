@@ -25,7 +25,7 @@ const Navbar = () => {
                                 <Link to="/cart"><h1>Cart-item {qty}</h1></Link>
                             </div>
                             <div className=' px-6 hover:underline hover:underline-offset-8 font-medium text-[20px] decoration-3  underline underline-offset-2 '>
-                                <h1>Contact</h1>
+                                <Link to="/contact"><h1>Contact</h1></Link>
                             </div>
                         </div>
                     </div>
@@ -34,16 +34,16 @@ const Navbar = () => {
             </div>
             <div className={toggle ?' w-full bg-black top-0 h-74 text-white text-center p-10 md:hidden': "hidden md:hidden"}>
                 <div className=' pb-6 hover:underline hover:underline-offset-8 font-medium text-[20px] decoration-3  cursor-pointer underline un2erline-offset-8'>
-                    <h1 onClick={()=>setToggle(!toggle)}>Home</h1>
+                    <Link to="/"><h1 onClick={()=>setToggle(!toggle)}>Home</h1></Link>
                 </div>
                 <div className=' pb-6 hover:underline hover:underline-offset-8 font-medium text-[20px] decoration-3  cursor-pointer underline un2erline-offset-8'>
-                    <h1 onClick={()=>setToggle(!toggle)}>Projects</h1>
+                    <Link to="/product"><h1 onClick={()=>setToggle(!toggle)}>Product</h1></Link>
                 </div>
                 <div className=' pb-6 hover:underline hover:underline-offset-8 font-medium text-[20px] decoration-3  cursor-pointer underline un2erline-offset-8'>
                     <Link to="/cart"><h1 onClick={()=>setToggle(!toggle)}>Cart-item {qty}</h1></Link>
                 </div>
                 <div className=' pb-6 hover:underline hover:underline-offset-8 font-medium text-[20px] decoration-3  cursor-pointer underline un2erline-offset-8'>
-                    <h1 onClick={()=>setToggle(!toggle)}>Contact</h1>
+                    <Link to="/contact"><h1 onClick={()=>setToggle(!toggle)}>Contact</h1></Link>
                 </div>
             </div>
         </div>

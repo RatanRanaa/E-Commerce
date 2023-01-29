@@ -10,9 +10,9 @@ const Product = () => {
     <>
         <div className=' h-screen mt-10'>
             <div className=' pt-8 flex items-center justify-center'>
-                <input className='  w-96 px-5 h-8 border-spacing-2 border-2 border-black text-black py-4'
+                <input className=' text-center w-96 px-5 h-8 border-spacing-2 border-2 border-black text-black py-4'
                 type="text"
-                placeholder='Search...'
+                placeholder='Search item...'
                 onChange={(e)=> setQuery(e.target.value)} />
             </div>
             <div>
