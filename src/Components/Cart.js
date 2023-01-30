@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../Global/CartContext'
+import emptycart from '../assets/emptycart.png'
 
 const Cart = () => {
     const { shoppingCart, totalPrice, dispatch, qty  } = useContext(CartContext)
   return (
     <>
-    <div className='  mt-8 py-4 grid md:grid-cols-3 gap-6 items-center justify-center px-5'>
+    <div className='  mt-8 grid md:grid-cols-3 gap-6 items-center justify-center'>
       
       {shoppingCart.length > 0 ?
       shoppingCart.map(cart => (
@@ -31,7 +32,13 @@ const Cart = () => {
         </div>
       ))
     :
-    "Sorry Your Cart is Currently Empty"}
+    // "Sorry Your Cart is Currently Empty"
+    <div class="h-screen w-screen bg-gray-300 flex items-center justify-center">
+    <div class="w-64 h-64 bg-white p-6 rounded-lg shadow-lg">
+      <img src={emptycart} alt="placeholder" class="w-26 h-26 rounded-full mx-auto mb-6"/>
+    </div>
+  </div>
+    }
     </div>
     <div className=' '>
     {
