@@ -46,7 +46,7 @@ const Cart = () => {
       <div className=' flex mb-5 items-center justify-center flex-col text-4xl border-2 border-black'>
         <h1 className=' py-4 underline underline-offset-8'> Qty: {qty}</h1>
         <h1 className=' py-4 underline underline-offset-8'> Price : ${totalPrice}</h1>
-        <button class="bg-indigo-800 text-white p-2 my-4 rounded-md items-center justify-center flex">Buy Now</button>
+        <button class="bg-gray-600 text-white my-4 rounded-md items-center justify-center flex">Buy Now</button>
       </div>
       :
       ""

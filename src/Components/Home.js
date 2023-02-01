@@ -22,7 +22,7 @@ function Home() {
 
       <div className="relative h-full flex items-center mt-55">
         <img 
-          className="h-96 w-full object-cover sm:h-[80vh] md:h-[80vh] lg:h-[80vh]" 
+          className="h-96 w-full object-cover sm:h-[80vh] md:h-[60vh] lg:h-[60vh]" 
           width={800} 
           src={allImages[selectedImage]}
           alt=""

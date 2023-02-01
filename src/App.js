@@ -7,6 +7,7 @@ import ProductsContextProvider from './Global/ProductsContext';
 import CartContextProvider from './Global/CartContext';
 import Cart from './Components/Cart';
 import Contact from './Components/Contact';
+import SignIn from './Components/SignIn';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/product' element={<Product/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/signin' element={<SignIn/>}/>
       </Routes>
     </Router>
     </CartContextProvider>
